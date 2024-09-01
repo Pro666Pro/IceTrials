@@ -15,5 +15,13 @@ Tab:AddButton({
 	Name = "Get Badge",
 	Callback = function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-554, 177, 56)
+wait(0.7)
+for i,v in ipairs(game:GetService("Workspace"):GetDescendants()) do
+            if v.ClassName == "ProximityPrompt" then
+                fireproximityprompt(v)
+            end
+        end
+wait(1.5)
+game:GetService("TeleportService"):Teleport(6403373529)
   	end 
 })
