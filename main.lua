@@ -1,7 +1,7 @@
-local GameName = "Nexer Hub - Ice Trials 👏"
+local GameName = "Ice Trials 👏"
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({IntroText = "Nexer Hub 👏", IntroIcon = "rbxassetid://15315284749",Name = GameName, HidePremium = false, SaveConfig = true, ConfigFolder = "Tutorial"})
+local Window = OrionLib:MakeWindow({IntroText = "Ice Trials 👏", IntroIcon = "rbxassetid://15315284749",Name = GameName, HidePremium = false, SaveConfig = true, ConfigFolder = "Tutorial"})
 
 OrionLib:MakeNotification({Name = "Warning",Content = "Use at your own risk.",Image = "rbxassetid://7733658504",Time = 5})
 
@@ -36,7 +36,7 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddButton({
-	Name = "Get Badge",
+	Name = "Auto Get Frostbite",
 	Callback = function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-554, 177, 56)
 wait(0.7)
@@ -48,4 +48,21 @@ for i,v in ipairs(game:GetService("Workspace"):GetDescendants()) do
 wait(1.5)
 game:GetService("TeleportService"):Teleport(6403373529)
   	end 
+})
+
+local Teleport = Window:MakeTab({
+	Name = "Teleport",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tp = Teleport:AddSection({
+	Name = "teleport"
+})
+
+Tp:AddButton({
+	Name = "Teleport Get Frostbite",
+	Callback = function()
+			 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-552.3557739257812, 177.17774963378906, 56.51939010620117)
+	 end
 })
